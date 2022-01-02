@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
-import Dashboard from "./Dashboard";
 import Signin from './Signin';
 import Signup from './Signup';
 
@@ -16,8 +15,6 @@ class App extends Component{
           <Route exact path="/" element={<Signup />}>
           </Route>
           <Route exact path="/signin" element={<Signin />}>
-          </Route>
-          <Route exact path="/dashboard" element={<Dashboard />}>
           </Route>
         </Routes>
       </BrowserRouter>
