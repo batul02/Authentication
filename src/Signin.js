@@ -12,7 +12,7 @@ function Signin() {
     const signinUser = async (e) => {
         e.preventDefault();
 
-        const res = await fetch('http://localhost:4000/app/signin', {
+        const res = await fetch('https://auth-havi.netlify.app/app/signin', {
             method:"POST",
             headers:{
                 "Content-Type" : "application/json"

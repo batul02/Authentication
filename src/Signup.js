@@ -1,7 +1,7 @@
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './App.css';
 
 class Signup extends Component{
@@ -54,7 +54,7 @@ class Signup extends Component{
           password: this.state.password
         }
     
-        axios.post('http://localhost:4000/app/signup', registered)
+        axios.post('https://auth-havi.netlify.app/app/signup', registered)
           .then(response => console.log(response.data))
     
         this.setState({
@@ -89,7 +89,7 @@ class Signup extends Component{
                   className="form-control form-group"/>
                   
                   <input type="submit" className="btn btn-danger btn-block"
-                  value="Submit"/>
+                  value="Submit" onClick={<Link to="/signin">signin</Link>}/>
     
                 </form>
               </div>

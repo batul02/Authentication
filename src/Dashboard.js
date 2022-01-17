@@ -6,7 +6,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     async function populateDash() {
-        const req = await fetch('http://localhost:4000/app/dash', {
+        const req = await fetch('https://auth-havi.netlify.app/app/dash', {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             }
@@ -30,7 +30,7 @@ const Dashboard = () => {
         }
     }, [])
 
-    return <h1>Hello World</h1>
+    return <h1>Dashboard</h1>
 }
 
 export default Dashboard;
