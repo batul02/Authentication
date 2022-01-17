@@ -6,7 +6,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     async function populateDash() {
-        const req = await fetch('https://auth-havi.netlify.app/app/dash', {
+        const req = await fetch('https://secure-cove-70954.herokuapp.com/app/dash', {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             }
