@@ -13,7 +13,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, () =>console.log("Database Connect
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', 'https://auth-havi.netlify.app');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, FETCH, OPTIONS, PUT, PATCH, DELETE');

@@ -1,4 +1,4 @@
-POST https://auth-havi.netlify.app/signin
+POST https://auth-havi.netlify.app/app/signin
 Content-Type: application/json
 
 {
