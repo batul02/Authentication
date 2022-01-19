@@ -12,7 +12,7 @@ function Signin() {
     const signinUser = async (e) => {
         e.preventDefault();
 
-        const res = await fetch('https://secure-cove-70954.herokuapp.com', {
+        const res = await fetch('https://secure-cove-70954.herokuapp.com/signin', {
             method:"POST",
             headers:{
                 "Content-Type" : "application/json"
