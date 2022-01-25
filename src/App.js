@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Signin from 'Signin';
 import './App.css';
 import Dashboard from "./Dashboard";
-import Signin from './Signin';
 import Signup from './Signup';
 
 class App extends Component{
