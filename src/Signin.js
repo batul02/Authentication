@@ -14,7 +14,7 @@ function Signin() {
 
         const res = await fetch('https://young-caverns-16353.herokuapp.com/app/signin', {
             method:"POST",
-            mode: 'no-cors',
+            mode: 'cors',
             cache: 'no-cache',
             headers:{
                 "Content-Type" : "application/json"
