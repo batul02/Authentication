@@ -13,11 +13,11 @@ class App extends Component{
       <div className="App">
         <BrowserRouter>
         <Routes>
-          <Route exact path="https://auth-havi.netlify.app" element={<Signup />}>
+          <Route exact path="/" element={<Signup />}>
           </Route>
-          <Route exact path="https://auth-havi.netlify.app/signin" element={<Signin />}>
+          <Route exact path="/signin" element={<Signin />}>
           </Route>
-          <Route exact path="https://auth-havi.netlify.app/dashboard" element={<Dashboard />}>
+          <Route exact path="/dashboard" element={<Dashboard />}>
           </Route>
         </Routes>
       </BrowserRouter>
