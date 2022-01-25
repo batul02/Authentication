@@ -1,10 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Signin from 'Signin';
 import './App.css';
 import Dashboard from "./Dashboard";
 import Signup from './Signup';
+import Signin from '/Signin';
 
 class App extends Component{
 
