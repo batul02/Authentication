@@ -1,20 +1,19 @@
 import jwt from 'jsonwebtoken';
 import React, { useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    async function populateDash() {
-        const req = await fetch('https://young-caverns-16353.herokuapp.com/app/signin', {
-            headers: {
-                'x-access-token': localStorage.getItem('token'),
-            }
-        })
+    // async function populateDash() {
+    //     const req = await fetch('https://young-caverns-16353.herokuapp.com/app/signin', {
+    //         headers: {
+    //             'x-access-token': localStorage.getItem('token'),
+    //         }
+    //     })
 
-        const data = req.json()
-        console.log(data);
-    }
+    //     const data = req.json()
+    //     console.log(data);
+    // }
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -25,7 +24,7 @@ const Dashboard = () => {
                 // navigate('/signin');
             }
             else{
-                populateDash();
+                return "Hello World";
             }
         }
     }, [])
