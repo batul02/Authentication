@@ -3,8 +3,8 @@ import { Component } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import Dashboard from "./Dashboard";
+import Signin from './Signin';
 import Signup from './Signup';
-import Signin from '/Signin';
 
 class App extends Component{
 
@@ -13,11 +13,11 @@ class App extends Component{
       <div className="App">
         <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Signup />}>
+          <Route exact path="https://auth-havi.netlify.app" element={<Signup />}>
           </Route>
-          <Route exact path="/signin" element={<Signin />}>
+          <Route exact path="https://auth-havi.netlify.app/signin" element={<Signin />}>
           </Route>
-          <Route exact path="/dashboard" element={<Dashboard />}>
+          <Route exact path="https://auth-havi.netlify.app/dashboard" element={<Dashboard />}>
           </Route>
         </Routes>
       </BrowserRouter>
