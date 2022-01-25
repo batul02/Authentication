@@ -6,7 +6,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     async function populateDash() {
-        const req = await fetch('https://young-caverns-16353.herokuapp.com/app/signup', {
+        const req = await fetch('https://young-caverns-16353.herokuapp.com/app/signin', {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             }
