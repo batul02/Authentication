@@ -54,7 +54,7 @@ class Signup extends Component{
           password: this.state.password
         }
     
-        axios.post('https://secure-cove-70954.herokuapp.com/app/signup', registered)
+        axios.post('https://young-caverns-16353.herokuapp.com/app/signup', registered)
           .then(response => console.log(response.data))
     
         this.setState({

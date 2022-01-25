@@ -1,9 +1,0 @@
-POST https://auth-havi.netlify.app/app/signup
-Content-Type: application/json
-
-{
-    "fullName":"BatulMakada",
-    "username":"batul",
-    "email":"batul@gmail.com",
-    "password":"batulm"
-}
