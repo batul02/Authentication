@@ -1,9 +1,7 @@
 import jwt from 'jsonwebtoken';
 import React, { useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-    const navigate = useNavigate();
 
     async function populateDash() {
         const req = await fetch('https://young-caverns-16353.herokuapp.com/app/dash', {
