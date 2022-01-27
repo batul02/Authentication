@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import './App.css';
 
-function Signin() {
+function Signin(props) {
 
     // const history = useNavigate();
     const [username, setusername] = useState('');
@@ -34,7 +34,7 @@ function Signin() {
       } else {
           localStorage.setItem("token", data.user);
 
-          this.props.history.push("/dashboard");
+          props.history.push("/dashboard");
       }
     };
 
