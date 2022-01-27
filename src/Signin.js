@@ -10,33 +10,33 @@ function Signin() {
     const[password, setpassword] = useState('');
 
     const signinUser = async (e) => {
-        e.preventDefault();
+      e.preventDefault();
 
-        const res = await fetch('https://young-caverns-16353.herokuapp.com/app/signin', {
-            method:"POST",
-            mode: 'cors',
-            cache: 'no-cache',
-            headers:{
-                "Content-Type" : "application/json"
-            }, 
-            body:JSON.stringify({
-                username:username,
-                password:password
-            })
-        }).catch(function (erro) {
-          console.log(erro);
-        });
+      const res = await fetch(
+          "https://young-caverns-16353.herokuapp.com/app/signin",
+          {
+              method: "POST",
+              headers: {
+                  "Access-Control-Allow-Origin": "*",
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                  username: username,
+                  password: password,
+              }),
+          }
+      );
 
-        const data = res.json();
+      const data = res.json();
 
-        if(res.status === 400 || !data) {
-            window.alert("Invalid Credentials");
-        } else {
-            localStorage.setItem('token', data.user);         
-            window.location.href = '/dashboard';
-            // history.push("/");
-        }
-    }
+      if (res.status === 400 || !data) {
+          window.alert("Invalid Credentials");
+      } else {
+          localStorage.setItem("token", data.user);
+
+          props.history.push("/dashboard");
+      }
+    };
 
     return(
       <div>

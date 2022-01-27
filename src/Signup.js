@@ -44,25 +44,31 @@ class Signup extends Component{
         })
       }
     
-      onSubmit(event){
-        event.preventDefault()
-    
+      onSubmit(event) {
+        event.preventDefault();
+
         const registered = {
-          fullName: this.state.fullName,
-          username: this.state.username,
-          email: this.state.email,
-          password: this.state.password
-        }
-    
-        axios.post('https://young-caverns-16353.herokuapp.com/app/signup', registered)
-          .then(response => console.log(response.data))
-    
+            fullName: this.state.fullName,
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password,
+        };
+
+        axios
+            .post("https://young-caverns-16353.herokuapp.com/app/signup", registered, {
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Credentials": "true",
+                },
+            })
+            .then((response) => console.log(response.data));
+
         this.setState({
-          fullName:'',
-          username:'',
-          email:'',
-          password:''
-        })
+            fullName: "",
+            username: "",
+            email: "",
+            password: "",
+        });
       }
     
       render(){
