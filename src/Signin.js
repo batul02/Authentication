@@ -34,7 +34,7 @@ function Signin() {
       } else {
           localStorage.setItem("token", data.user);
 
-          props.history.push("/dashboard");
+          this.props.history.push("/dashboard");
       }
     };
 
