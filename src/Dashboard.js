@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 const Dashboard = () => {
 
     async function populateDash() {
-        const req = await fetch('https://young-caverns-16353.herokuapp.com/app/dash', {
+        const req = await fetch(process.env.DASHBOARD_ACCESS, {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             }

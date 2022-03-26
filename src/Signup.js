@@ -55,7 +55,7 @@ class Signup extends Component{
         };
 
         axios
-            .post("https://young-caverns-16353.herokuapp.com/app/signup", registered, {
+            .post(process.env.SINGUP_ACCESS, registered, {
                 headers: {
                     "Access-Control-Allow-Origin": "*",
                     "Access-Control-Allow-Credentials": "true",
